@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    testWhileIdle: true
+    validationQuery: SELECT 1
+
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    enabled-by-default: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekaserver:8070/eureka/

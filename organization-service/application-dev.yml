@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgres://dev_database:5432/postgres
+    username: postgres
+    password: ostock_dev

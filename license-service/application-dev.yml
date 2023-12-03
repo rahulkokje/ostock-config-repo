@@ -1,0 +1,8 @@
+example:
+  property: I am DEV
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dev_database:5432/ostock_dev
+    username: postgres
+    password: postgres
