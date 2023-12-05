@@ -4,8 +4,10 @@ server:
 spring:
   application:
     name: license-service
+  
   profiles:
     active: dev
+  
   jpa:
     hibernate:
       ddl-auto: none
@@ -17,6 +19,11 @@ spring:
   datasource:
     testWhileIdle: true
     validationQuery: SELECT 1
+
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 management:
   endpoints:
